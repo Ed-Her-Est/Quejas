@@ -108,7 +108,7 @@
             <tr>
                 <th>Fecha</th>
                 <th>Asunto</th>
-                <th>Estatus</th>
+                <th>Estado</th>
                 <th>Acciones</th>
             </tr>
         </thead>
