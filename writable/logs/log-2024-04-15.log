@@ -1,0 +1,634 @@
+INFO - 2024-04-15 21:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:41:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:44:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:44:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:45:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:47:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-15 21:49:12 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'quejas', 3306, '', 0)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#9 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#10 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#6 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#9 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#10 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#15 {main}
+CRITICAL - 2024-04-15 21:49:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'quejas'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,password', [...], null, 'password')
+ 7 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', [...], [...])
+ 8 SYSTEMPATH\Controller.php(154): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\UserController.php(34): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\UserController->login()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER EST\\Documents\\plantilla\\public\\index.php')
+INFO - 2024-04-15 21:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-15 21:49:58 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'quejas', 3306, '', 0)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#9 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#10 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#6 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#9 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#10 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#15 {main}
+CRITICAL - 2024-04-15 21:49:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'quejas'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,password', [...], null, 'password')
+ 7 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', [...], [...])
+ 8 SYSTEMPATH\Controller.php(154): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\UserController.php(34): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\UserController->login()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER EST\\Documents\\plantilla\\public\\index.php')
+INFO - 2024-04-15 21:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-15 21:50:04 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'quejas', 3306, '', 0)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#9 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#10 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#6 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#9 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#10 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#15 {main}
+CRITICAL - 2024-04-15 21:50:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'quejas'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,password', [...], null, 'password')
+ 7 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', [...], [...])
+ 8 SYSTEMPATH\Controller.php(154): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\UserController.php(34): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\UserController->login()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER EST\\Documents\\plantilla\\public\\index.php')
+INFO - 2024-04-15 21:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:55:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:55:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 21:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:05:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:05:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:08:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-15 22:12:33 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'quejas', 3306, '', 0)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#9 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#10 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#6 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#9 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#10 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#15 {main}
+CRITICAL - 2024-04-15 22:12:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'quejas'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,password', [...], null, 'password')
+ 7 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', [...], [...])
+ 8 SYSTEMPATH\Controller.php(154): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\UserController.php(34): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\UserController->login()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER EST\\Documents\\plantilla\\public\\index.php')
+INFO - 2024-04-15 22:12:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-15 22:12:43 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'quejas', 3306, '', 0)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#9 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#10 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#6 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#9 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#10 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#15 {main}
+CRITICAL - 2024-04-15 22:12:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'quejas'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,password', [...], null, 'password')
+ 7 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', [...], [...])
+ 8 SYSTEMPATH\Controller.php(154): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\UserController.php(34): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\UserController->login()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER EST\\Documents\\plantilla\\public\\index.php')
+INFO - 2024-04-15 22:12:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-15 22:12:50 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'quejas', 3306, '', 0)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#9 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#10 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#6 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#9 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#10 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#15 {main}
+CRITICAL - 2024-04-15 22:12:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'quejas'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,password', [...], null, 'password')
+ 7 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', [...], [...])
+ 8 SYSTEMPATH\Controller.php(154): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\UserController.php(34): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\UserController->login()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER EST\\Documents\\plantilla\\public\\index.php')
+INFO - 2024-04-15 22:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-15 22:12:50 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'quejas', 3306, '', 0)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#9 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#10 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#6 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#9 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#10 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#15 {main}
+CRITICAL - 2024-04-15 22:12:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'quejas'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,password', [...], null, 'password')
+ 7 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', [...], [...])
+ 8 SYSTEMPATH\Controller.php(154): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\UserController.php(34): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\UserController->login()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER EST\\Documents\\plantilla\\public\\index.php')
+INFO - 2024-04-15 22:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-15 22:37:51 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'quejas', 3306, '', 0)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#9 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#10 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#6 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#9 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#10 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#15 {main}
+CRITICAL - 2024-04-15 22:37:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'quejas'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,password', [...], null, 'password')
+ 7 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', [...], [...])
+ 8 SYSTEMPATH\Controller.php(154): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\UserController.php(34): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\UserController->login()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER EST\\Documents\\plantilla\\public\\index.php')
+INFO - 2024-04-15 22:37:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-15 22:38:01 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'quejas', 3306, '', 0)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#9 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#10 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'quejas' in C:\Users\ED HER EST\Documents\plantilla\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ED HER EST\Documents\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\ED HER EST\Documents\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\ED HER EST\Documents\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\Users\ED HER EST\Documents\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#6 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,passwo...', Array, NULL, 'password')
+#7 C:\Users\ED HER EST\Documents\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', Array, Array)
+#8 C:\Users\ED HER EST\Documents\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#9 C:\Users\ED HER EST\Documents\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#10 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#11 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#12 C:\Users\ED HER EST\Documents\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\ED HER EST\Documents\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\ED HER EST\Documents\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER...')
+#15 {main}
+CRITICAL - 2024-04-15 22:38:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'quejas'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Validation\Validation.php(328): App\Validation\Userrules->validateUser('contrasenia1', 'username,password', [...], null, 'password')
+ 7 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'contrasenia1', [...], [...])
+ 8 SYSTEMPATH\Controller.php(154): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\UserController.php(34): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\UserController->login()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ED HER EST\\Documents\\plantilla\\public\\index.php')
+INFO - 2024-04-15 22:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:50:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:51:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:52:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-15 22:56:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

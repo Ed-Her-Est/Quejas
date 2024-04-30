@@ -1,0 +1,73 @@
+INFO - 2024-04-09 23:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-09 23:18:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-09 23:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-09 23:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-09 23:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-09 23:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-09 23:41:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-09 23:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-09 23:43:20 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`usuarios`, CONSTRAINT `usuarios_perfil_foreign` FOREIGN KEY (`perfil`) REFERENCES `perfiles` (`id`)) in C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\plantilla\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\plantilla\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\plantilla\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\plantilla\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\plantilla\app\Controllers\RegistroController.php(58): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(943): App\Controllers\RegistroController->create()
+#9 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroController))
+#10 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-09 23:43:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`usuarios`, CONSTRAINT `usuarios_perfil_foreign` FOREIGN KEY (`perfil`) REFERENCES `perfiles` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`perfil`, `username`, `nombre`, `apaterno`, `amaterno`, `email`, `telefono`, `password`, `sexo`, `status`, `fecha_nacimiento`, `created_at`, `updated_at`) VALUES (:perfil:, :username:, :nombre:, :apaterno:, :amaterno:, :email:, :telefono:, :password:, :sexo:, :status:, :fecha_nacimiento:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\RegistroController.php(58): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\RegistroController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-09 23:43:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`usuarios`, CONSTRAINT `usuarios_perfil_foreign` FOREIGN KEY (`perfil`) REFERENCES `perfiles` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`perfil`, `username`, `nombre`, `apaterno`, `amaterno`, `email`, `telefono`, `password`, `sexo`, `status`, `fecha_nacimiento`, `created_at`, `updated_at`) VALUES (1, \'admin\', \'Esau\', \'Hernández\', \'Estudillo\', \'admin@mail.com\', \'2261091180\', \'$2y$10$9DEQkf8g3Ok5a2uuaRGwIuJ7w7cMjv0LeAfrujLbIaVixvr0c/UMi\', \'m\', 1, \'2000-01-01\', \'2024-04-09 23:43:20\', \'2024-04-09 23:43:20\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`perfil`, `username`, `nombre`, `apaterno`, `amaterno`, `email`, `telefono`, `password`, `sexo`, `status`, `fecha_nacimiento`, `created_at`, `updated_at`) VALUES (1, \'admin\', \'Esau\', \'Hernández\', \'Estudillo\', \'admin@mail.com\', \'2261091180\', \'$2y$10$9DEQkf8g3Ok5a2uuaRGwIuJ7w7cMjv0LeAfrujLbIaVixvr0c/UMi\', \'m\', 1, \'2000-01-01\', \'2024-04-09 23:43:20\', \'2024-04-09 23:43:20\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`perfil`, `username`, `nombre`, `apaterno`, `amaterno`, `email`, `telefono`, `password`, `sexo`, `status`, `fecha_nacimiento`, `created_at`, `updated_at`) VALUES (:perfil:, :username:, :nombre:, :apaterno:, :amaterno:, :email:, :telefono:, :password:, :sexo:, :status:, :fecha_nacimiento:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\RegistroController.php(58): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\RegistroController->create()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-09 23:43:20 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`usuarios`, CONSTRAINT `usuarios_perfil_foreign` FOREIGN KEY (`perfil`) REFERENCES `perfiles` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `usuarios` (`perfil`, `username`, `nombre`, `apaterno`, `amaterno`, `email`, `telefono`, `password`, `sexo`, `status`, `fecha_nacimiento`, `created_at`, `updated_at`) VALUES (1, \'admin\', \'Esau\', \'Hernández\', \'Estudillo\', \'admin@mail.com\', \'2261091180\', \'$2y$10$9DEQkf8g3Ok5a2uuaRGwIuJ7w7cMjv0LeAfrujLbIaVixvr0c/UMi\', \'m\', 1, \'2000-01-01\', \'2024-04-09 23:43:20\', \'2024-04-09 23:43:20\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`perfil`, `username`, `nombre`, `apaterno`, `amaterno`, `email`, `telefono`, `password`, `sexo`, `status`, `fecha_nacimiento`, `created_at`, `updated_at`) VALUES (1, \'admin\', \'Esau\', \'Hernández\', \'Estudillo\', \'admin@mail.com\', \'2261091180\', \'$2y$10$9DEQkf8g3Ok5a2uuaRGwIuJ7w7cMjv0LeAfrujLbIaVixvr0c/UMi\', \'m\', 1, \'2000-01-01\', \'2024-04-09 23:43:20\', \'2024-04-09 23:43:20\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`perfil`, `username`, `nombre`, `apaterno`, `amaterno`, `email`, `telefono`, `password`, `sexo`, `status`, `fecha_nacimiento`, `created_at`, `updated_at`) VALUES (1, \'admin\', \'Esau\', \'Hernández\', \'Estudillo\', \'admin@mail.com\', \'2261091180\', \'$2y$10$9DEQkf8g3Ok5a2uuaRGwIuJ7w7cMjv0LeAfrujLbIaVixvr0c/UMi\', \'m\', 1, \'2000-01-01\', \'2024-04-09 23:43:20\', \'2024-04-09 23:43:20\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`perfil`, `username`, `nombre`, `apaterno`, `amaterno`, `email`, `telefono`, `password`, `sexo`, `status`, `fecha_nacimiento`, `created_at`, `updated_at`) VALUES (:perfil:, :username:, :nombre:, :apaterno:, :amaterno:, :email:, :telefono:, :password:, :sexo:, :status:, :fecha_nacimiento:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\RegistroController.php(58): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\RegistroController->create()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-09 23:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-09 23:44:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-09 23:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-09 23:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-09 23:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-09 23:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-09 23:45:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-09 23:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

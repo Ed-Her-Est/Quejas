@@ -1,0 +1,1359 @@
+INFO - 2024-04-21 12:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 12:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 12:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 12:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 12:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-21 12:37:21 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`)) in C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `qu...', 0)
+#1 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `qu...')
+#2 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `qu...')
+#3 C:\xampp\htdocs\plantilla\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `qu...', Array, false)
+#4 C:\xampp\htdocs\plantilla\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\plantilla\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\plantilla\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\plantilla\app\Controllers\Usuario\AacademicaController.php(58): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+#9 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+#10 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-21 12:37:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usuario\AacademicaController.php(58): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 12:37:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \'qkjaskjsakj\', \'askasksskj\', \'smksjsdkjskds\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \'qkjaskjsakj\', \'askasksskj\', \'smksjsdkjskds\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usuario\AacademicaController.php(58): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 12:37:21 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \'qkjaskjsakj\', \'askasksskj\', \'smksjsdkjskds\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \'qkjaskjsakj\', \'askasksskj\', \'smksjsdkjskds\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \'qkjaskjsakj\', \'askasksskj\', \'smksjsdkjskds\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usuario\AacademicaController.php(58): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 13:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-21 13:03:24 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`)) in C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `qu...', 0)
+#1 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `qu...')
+#2 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `qu...')
+#3 C:\xampp\htdocs\plantilla\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `qu...', Array, false)
+#4 C:\xampp\htdocs\plantilla\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\plantilla\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\plantilla\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\plantilla\app\Controllers\Usuario\AacademicaController.php(58): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+#9 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+#10 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-21 13:03:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usuario\AacademicaController.php(58): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 13:03:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-10\', \'osokdsokds\', \'sm,smsd\', \'smsm\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-10\', \'osokdsokds\', \'sm,smsd\', \'smsm\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usuario\AacademicaController.php(58): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 13:03:24 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-10\', \'osokdsokds\', \'sm,smsd\', \'smsm\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-10\', \'osokdsokds\', \'sm,smsd\', \'smsm\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-10\', \'osokdsokds\', \'sm,smsd\', \'smsm\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usuario\AacademicaController.php(58): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 13:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:14:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-21 13:14:27 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`)) in C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `qu...', 0)
+#1 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `qu...')
+#2 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `qu...')
+#3 C:\xampp\htdocs\plantilla\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `qu...', Array, false)
+#4 C:\xampp\htdocs\plantilla\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\plantilla\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\plantilla\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\plantilla\app\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+#9 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+#10 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-21 13:14:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 13:14:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \'sdlskdkld\', \'dssd,mdm,d\', \'skjsdkjdkd\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \'sdlskdkld\', \'dssd,mdm,d\', \'skjsdkjdkd\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 13:14:27 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \'sdlskdkld\', \'dssd,mdm,d\', \'skjsdkjdkd\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \'sdlskdkld\', \'dssd,mdm,d\', \'skjsdkjdkd\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \'sdlskdkld\', \'dssd,mdm,d\', \'skjsdkjdkd\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 13:29:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:29:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:30:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-21 13:30:37 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`)) in C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `qu...', 0)
+#1 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `qu...')
+#2 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `qu...')
+#3 C:\xampp\htdocs\plantilla\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `qu...', Array, false)
+#4 C:\xampp\htdocs\plantilla\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\plantilla\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\plantilla\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\plantilla\app\Controllers\Usuario\AacademicaController.php(54): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+#9 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+#10 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-21 13:30:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`id_usuario`, `id_prioridad`, `fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:id_usuario:, :id_prioridad:, :fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usuario\AacademicaController.php(54): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 13:30:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`id_usuario`, `id_prioridad`, `fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'123\', \'1\', \'2024-04-13\', \'aslkslks\', \'smsdksd\', \'ssdkdkdds\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`id_usuario`, `id_prioridad`, `fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'123\', \'1\', \'2024-04-13\', \'aslkslks\', \'smsdksd\', \'ssdkdkdds\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`id_usuario`, `id_prioridad`, `fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:id_usuario:, :id_prioridad:, :fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usuario\AacademicaController.php(54): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 13:30:37 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `queja` (`id_usuario`, `id_prioridad`, `fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'123\', \'1\', \'2024-04-13\', \'aslkslks\', \'smsdksd\', \'ssdkdkdds\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`id_usuario`, `id_prioridad`, `fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'123\', \'1\', \'2024-04-13\', \'aslkslks\', \'smsdksd\', \'ssdkdkdds\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`id_usuario`, `id_prioridad`, `fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'123\', \'1\', \'2024-04-13\', \'aslkslks\', \'smsdksd\', \'ssdkdkdds\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`id_usuario`, `id_prioridad`, `fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:id_usuario:, :id_prioridad:, :fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usuario\AacademicaController.php(54): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 13:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:56:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:56:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-21 13:57:11 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`)) in C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `qu...', 0)
+#1 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `qu...')
+#2 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `qu...')
+#3 C:\xampp\htdocs\plantilla\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `qu...', Array, false)
+#4 C:\xampp\htdocs\plantilla\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\plantilla\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\plantilla\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\plantilla\app\Controllers\Usuario\AacademicaController.php(54): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+#9 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+#10 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-21 13:57:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`id_usuario`, `id_prioridad`, `fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:id_usuario:, :id_prioridad:, :fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usuario\AacademicaController.php(54): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 13:57:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`id_usuario`, `id_prioridad`, `fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'123\', \'1\', \'2024-04-05\', \'w,lwwelkekle\', \'kleekeker\', \'eeekeekekj\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`id_usuario`, `id_prioridad`, `fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'123\', \'1\', \'2024-04-05\', \'w,lwwelkekle\', \'kleekeker\', \'eeekeekekj\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`id_usuario`, `id_prioridad`, `fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:id_usuario:, :id_prioridad:, :fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usuario\AacademicaController.php(54): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 13:57:11 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `queja` (`id_usuario`, `id_prioridad`, `fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'123\', \'1\', \'2024-04-05\', \'w,lwwelkekle\', \'kleekeker\', \'eeekeekekj\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`id_usuario`, `id_prioridad`, `fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'123\', \'1\', \'2024-04-05\', \'w,lwwelkekle\', \'kleekeker\', \'eeekeekekj\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`id_usuario`, `id_prioridad`, `fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'123\', \'1\', \'2024-04-05\', \'w,lwwelkekle\', \'kleekeker\', \'eeekeekekj\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`id_usuario`, `id_prioridad`, `fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:id_usuario:, :id_prioridad:, :fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usuario\AacademicaController.php(54): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 13:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-21 13:57:57 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`)) in C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `qu...', 0)
+#1 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `qu...')
+#2 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `qu...')
+#3 C:\xampp\htdocs\plantilla\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `qu...', Array, false)
+#4 C:\xampp\htdocs\plantilla\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\plantilla\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\plantilla\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\plantilla\app\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+#9 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+#10 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-21 13:57:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 13:57:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \'w,lwwelkekle\', \'kleekeker\', \'eeekeekekj\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \'w,lwwelkekle\', \'kleekeker\', \'eeekeekekj\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 13:57:57 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \'w,lwwelkekle\', \'kleekeker\', \'eeekeekekj\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \'w,lwwelkekle\', \'kleekeker\', \'eeekeekekj\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \'w,lwwelkekle\', \'kleekeker\', \'eeekeekekj\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 13:57:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:58:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-21 13:58:10 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`)) in C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `qu...', 0)
+#1 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `qu...')
+#2 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `qu...')
+#3 C:\xampp\htdocs\plantilla\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `qu...', Array, false)
+#4 C:\xampp\htdocs\plantilla\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\plantilla\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\plantilla\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\plantilla\app\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+#9 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+#10 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-21 13:58:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 13:58:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \',llkkjkj\', \'m,emmemn\', \'wmkjkjhbf\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \',llkkjkj\', \'m,emmemn\', \'wmkjkjhbf\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 13:58:10 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \',llkkjkj\', \'m,emmemn\', \'wmkjkjhbf\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \',llkkjkj\', \'m,emmemn\', \'wmkjkjhbf\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-05\', \',llkkjkj\', \'m,emmemn\', \'wmkjkjhbf\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 13:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 13:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:00:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:00:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:00:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:06:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:10:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:11:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:17:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:22:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:25:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:25:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:25:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:27:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:29:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:36:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:40:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:57:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-21 14:57:15 --> mysqli_sql_exception: Table 'quejas.usuarios' doesn't exist in C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('12345678', 'username,passwo...', Array, NULL, 'password')
+#8 C:\xampp\htdocs\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#9 C:\xampp\htdocs\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#10 C:\xampp\htdocs\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#12 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-04-21 14:57:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'quejas.usuarios' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\Validation\Validation.php(328): App\Validation\Userrules->validateUser('12345678', 'username,password', [...], null, 'password')
+ 6 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 7 SYSTEMPATH\Controller.php(154): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\UserController.php(34): CodeIgniter\Controller->validate([...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\UserController->login()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 14:57:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'quejas.usuarios' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios`
+WHERE `username` = \'karla\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios`
+WHERE `username` = \'karla\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\Validation\Validation.php(328): App\Validation\Userrules->validateUser('12345678', 'username,password', [...], null, 'password')
+ 8 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 9 SYSTEMPATH\Controller.php(154): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\UserController.php(34): CodeIgniter\Controller->validate([...], [...])
+11 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\UserController->login()
+12 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 14:57:15 --> [Caused by] mysqli_sql_exception: Table 'quejas.usuarios' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `usuarios`
+WHERE `username` = \'karla\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios`
+WHERE `username` = \'karla\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios`
+WHERE `username` = \'karla\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\Validation\Validation.php(328): App\Validation\Userrules->validateUser('12345678', 'username,password', [...], null, 'password')
+ 9 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+10 SYSTEMPATH\Controller.php(154): CodeIgniter\Validation\Validation->run()
+11 APPPATH\Controllers\UserController.php(34): CodeIgniter\Controller->validate([...], [...])
+12 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\UserController->login()
+13 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+14 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 14:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 14:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:00:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:00:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:00:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:13:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:16:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-21 15:16:54 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`)) in C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `qu...', 0)
+#1 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `qu...')
+#2 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `qu...')
+#3 C:\xampp\htdocs\plantilla\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `qu...', Array, false)
+#4 C:\xampp\htdocs\plantilla\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\plantilla\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\plantilla\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\plantilla\app\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+#9 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+#10 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-21 15:16:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 15:16:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-08\', \'wqkkj\', \'smds\', \'s,msddjksd\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-08\', \'wqkkj\', \'smds\', \'s,msddjksd\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 15:16:54 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-08\', \'wqkkj\', \'smds\', \'s,msddjksd\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-08\', \'wqkkj\', \'smds\', \'s,msddjksd\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-08\', \'wqkkj\', \'smds\', \'s,msddjksd\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 15:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:20:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:39:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:39:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-21 15:39:42 --> mysqli_sql_exception: Table 'quejas.usuarios' doesn't exist in C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\plantilla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\plantilla\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plantilla\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\plantilla\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\plantilla\system\Validation\Validation.php(328): App\Validation\Userrules->validateUser('12345678', 'username,passwo...', Array, NULL, 'password')
+#8 C:\xampp\htdocs\plantilla\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#9 C:\xampp\htdocs\plantilla\system\Controller.php(154): CodeIgniter\Validation\Validation->run()
+#10 C:\xampp\htdocs\plantilla\app\Controllers\UserController.php(34): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(943): App\Controllers\UserController->login()
+#12 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-04-21 15:39:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'quejas.usuarios' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\Validation\Validation.php(328): App\Validation\Userrules->validateUser('12345678', 'username,password', [...], null, 'password')
+ 6 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 7 SYSTEMPATH\Controller.php(154): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\UserController.php(34): CodeIgniter\Controller->validate([...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\UserController->login()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 15:39:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'quejas.usuarios' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios`
+WHERE `username` = \'karla\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios`
+WHERE `username` = \'karla\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\Validation\Validation.php(328): App\Validation\Userrules->validateUser('12345678', 'username,password', [...], null, 'password')
+ 8 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 9 SYSTEMPATH\Controller.php(154): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\UserController.php(34): CodeIgniter\Controller->validate([...], [...])
+11 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\UserController->login()
+12 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 15:39:42 --> [Caused by] mysqli_sql_exception: Table 'quejas.usuarios' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `usuarios`
+WHERE `username` = \'karla\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios`
+WHERE `username` = \'karla\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios`
+WHERE `username` = \'karla\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\Validation\Validation.php(328): App\Validation\Userrules->validateUser('12345678', 'username,password', [...], null, 'password')
+ 9 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+10 SYSTEMPATH\Controller.php(154): CodeIgniter\Validation\Validation->run()
+11 APPPATH\Controllers\UserController.php(34): CodeIgniter\Controller->validate([...], [...])
+12 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\UserController->login()
+13 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+14 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 15:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:40:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:41:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:43:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:43:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-21 15:43:12 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`)) in C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\plantilla\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `qu...', 0)
+#1 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `qu...')
+#2 C:\xampp\htdocs\plantilla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `qu...')
+#3 C:\xampp\htdocs\plantilla\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `qu...', Array, false)
+#4 C:\xampp\htdocs\plantilla\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\plantilla\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\plantilla\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\plantilla\app\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+#9 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+#10 C:\xampp\htdocs\plantilla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\plantilla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\plantilla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-21 15:43:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 15:43:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-12\', \'f,,\', \'dffd\', \'dfdfdf\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-12\', \'f,,\', \'dffd\', \'dfdfdf\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+CRITICAL - 2024-04-21 15:43:12 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`quejas`.`queja`, CONSTRAINT `queja_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `queja` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-12\', \'f,,\', \'dffd\', \'dfdfdf\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-12\', \'f,,\', \'dffd\', \'dfdfdf\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (\'2024-04-12\', \'f,,\', \'dffd\', \'dfdfdf\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `queja` (`fecha`, `asunto`, `lugar`, `descripcion`) VALUES (:fecha:, :asunto:, :lugar:, :descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usuario\AacademicaController.php(52): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\AacademicaController->insert()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\AacademicaController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 15:43:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:44:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:44:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:53:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:54:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 15:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:16:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:17:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:22:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:29:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:31:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:33:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 16:33:25 --> ErrorException: Undefined variable $quejas
+in APPPATH\Views\usuario\mQuejas\index.php on line 66.
+ 1 APPPATH\Views\usuario\mQuejas\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $quejas', 'C:\\xampp\\htdocs\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('usuario/mQuejas/index', [], true)
+ 5 APPPATH\Controllers\Usuario\MQuejasController.php(17): view('usuario/mQuejas/index')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 16:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:36:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 16:36:33 --> ErrorException: Undefined variable $quejas
+in APPPATH\Views\usuario\mQuejas\index.php on line 66.
+ 1 APPPATH\Views\usuario\mQuejas\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $quejas', 'C:\\xampp\\htdocs\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('usuario/mQuejas/index', [], true)
+ 5 APPPATH\Controllers\Usuario\MQuejasController.php(17): view('usuario/mQuejas/index')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 16:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:37:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:38:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 16:38:05 --> ErrorException: Undefined variable $quejas
+in APPPATH\Views\usuario\mQuejas\index.php on line 66.
+ 1 APPPATH\Views\usuario\mQuejas\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $quejas', 'C:\\xampp\\htdocs\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('usuario/mQuejas/index', [], true)
+ 5 APPPATH\Controllers\Usuario\MQuejasController.php(17): view('usuario/mQuejas/index')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 16:39:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 16:39:51 --> ErrorException: Undefined variable $quejas
+in APPPATH\Views\usuario\mQuejas\index.php on line 66.
+ 1 APPPATH\Views\usuario\mQuejas\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $quejas', 'C:\\xampp\\htdocs\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('usuario/mQuejas/index', [], true)
+ 5 APPPATH\Controllers\Usuario\MQuejasController.php(17): view('usuario/mQuejas/index')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 16:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 16:39:53 --> ErrorException: Undefined variable $quejas
+in APPPATH\Views\usuario\mQuejas\index.php on line 66.
+ 1 APPPATH\Views\usuario\mQuejas\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $quejas', 'C:\\xampp\\htdocs\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('usuario/mQuejas/index', [], true)
+ 5 APPPATH\Controllers\Usuario\MQuejasController.php(17): view('usuario/mQuejas/index')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 16:40:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 16:40:01 --> ErrorException: Undefined variable $quejas
+in APPPATH\Views\usuario\mQuejas\index.php on line 66.
+ 1 APPPATH\Views\usuario\mQuejas\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $quejas', 'C:\\xampp\\htdocs\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('usuario/mQuejas/index', [], true)
+ 5 APPPATH\Controllers\Usuario\MQuejasController.php(17): view('usuario/mQuejas/index')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 16:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 16:40:03 --> ErrorException: Undefined variable $quejas
+in APPPATH\Views\usuario\mQuejas\index.php on line 66.
+ 1 APPPATH\Views\usuario\mQuejas\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $quejas', 'C:\\xampp\\htdocs\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('usuario/mQuejas/index', [], true)
+ 5 APPPATH\Controllers\Usuario\MQuejasController.php(17): view('usuario/mQuejas/index')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 16:47:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:47:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 16:50:29 --> Error: Class "App\Controllers\Usuario\QuejaModel" not found
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 16:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 16:51:47 --> ErrorException: Undefined variable $quejaModel
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 17.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $quejaModel', 'C:\\xampp\\htdocs\\plantilla\\app\\Controllers\\Usuario\\MQuejasController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 16:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 16:54:23 --> ErrorException: Undefined variable $quejaModel
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 17.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $quejaModel', 'C:\\xampp\\htdocs\\plantilla\\app\\Controllers\\Usuario\\MQuejasController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 16:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:54:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 16:54:31 --> ErrorException: Undefined variable $quejaModel
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 17.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $quejaModel', 'C:\\xampp\\htdocs\\plantilla\\app\\Controllers\\Usuario\\MQuejasController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 16:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 16:55:07 --> ErrorException: Undefined variable $quejaModel
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 17.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $quejaModel', 'C:\\xampp\\htdocs\\plantilla\\app\\Controllers\\Usuario\\MQuejasController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\plantilla\\public\\index.php')
+INFO - 2024-04-21 16:57:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:57:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:57:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 16:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:27:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:31:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:34:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:40:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:41:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:50:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:51:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:51:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:52:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:53:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:57:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 17:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 18:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 18:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:11:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:11:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:11:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:11:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:12:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:12:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:13:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:13:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:20:04 --> ErrorException: Undefined property: stdClass::$prioridad
+in APPPATH\Views\usuario\mQuejas\index.php on line 188.
+ 1 APPPATH\Views\usuario\mQuejas\index.php(188): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$prioridad', 'F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php', 188)
+ 2 SYSTEMPATH\View\View.php(228): include('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('usuario/mquejas/index', [], true)
+ 5 APPPATH\Controllers\Usuario\MQuejasController.php(22): view('usuario/mquejas/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:21:41 --> ErrorException: Undefined property: stdClass::$prioridad
+in APPPATH\Views\usuario\mQuejas\index.php on line 188.
+ 1 APPPATH\Views\usuario\mQuejas\index.php(188): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$prioridad', 'F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php', 188)
+ 2 SYSTEMPATH\View\View.php(228): include('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('usuario/mquejas/index', [], true)
+ 5 APPPATH\Controllers\Usuario\MQuejasController.php(22): view('usuario/mquejas/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:22:12 --> ErrorException: Undefined property: stdClass::$prioridad
+in APPPATH\Views\usuario\mQuejas\index.php on line 188.
+ 1 APPPATH\Views\usuario\mQuejas\index.php(188): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$prioridad', 'F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php', 188)
+ 2 SYSTEMPATH\View\View.php(228): include('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('usuario/mquejas/index', [], true)
+ 5 APPPATH\Controllers\Usuario\MQuejasController.php(22): view('usuario/mquejas/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:32:46 --> ErrorException: Undefined property: stdClass::$tipoPrioridad
+in APPPATH\Views\usuario\mQuejas\index.php on line 188.
+ 1 APPPATH\Views\usuario\mQuejas\index.php(188): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tipoPrioridad', 'F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php', 188)
+ 2 SYSTEMPATH\View\View.php(228): include('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('usuario/mquejas/index', [], true)
+ 5 APPPATH\Controllers\Usuario\MQuejasController.php(22): view('usuario/mquejas/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:33:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:33:09 --> ErrorException: Declaration of App\Controllers\Usuario\MQuejasController::show($id) must be compatible with CodeIgniter\RESTful\ResourceController::show($id = null)
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 32.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-04-21 23:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:33:28 --> ErrorException: Declaration of App\Controllers\Usuario\MQuejasController::show() must be compatible with CodeIgniter\RESTful\ResourceController::show($id = null)
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 32.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-04-21 23:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:33:49 --> ErrorException: Undefined property: App\Controllers\Usuario\MQuejasController::$QuejaModel
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 17.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Usuario\\MQuejasController::$QuejaModel', 'F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Controllers\\Usuario\\MQuejasController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:34:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:34:09 --> ErrorException: Undefined property: App\Controllers\Usuario\MQuejasController::$QuejaModel
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 18.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Usuario\\MQuejasController::$QuejaModel', 'F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Controllers\\Usuario\\MQuejasController.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:34:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:34:58 --> ErrorException: Undefined property: stdClass::$tipoPrioridad
+in APPPATH\Views\usuario\mQuejas\index.php on line 188.
+ 1 APPPATH\Views\usuario\mQuejas\index.php(188): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tipoPrioridad', 'F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php', 188)
+ 2 SYSTEMPATH\View\View.php(228): include('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('usuario/mquejas/index', [], true)
+ 5 APPPATH\Controllers\Usuario\MQuejasController.php(22): view('usuario/mquejas/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:35:12 --> ErrorException: Undefined property: stdClass::$tipoPrioridad
+in APPPATH\Views\usuario\mQuejas\index.php on line 188.
+ 1 APPPATH\Views\usuario\mQuejas\index.php(188): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tipoPrioridad', 'F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php', 188)
+ 2 SYSTEMPATH\View\View.php(228): include('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('usuario/mquejas/index', [], true)
+ 5 APPPATH\Controllers\Usuario\MQuejasController.php(22): view('usuario/mquejas/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-21 23:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:36:54 --> ErrorException: Undefined property: stdClass::$tipoPrioridad
+in APPPATH\Views\usuario\mQuejas\index.php on line 188.
+ 1 APPPATH\Views\usuario\mQuejas\index.php(188): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tipoPrioridad', 'F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php', 188)
+ 2 SYSTEMPATH\View\View.php(228): include('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('usuario/mquejas/index', [], true)
+ 5 APPPATH\Controllers\Usuario\MQuejasController.php(22): view('usuario/mquejas/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:38:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:38:35 --> Error: Call to a member function find() on null
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 41.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(24): App\Controllers\Usuario\MQuejasController->obtener_tipo_prioridad('1')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:41:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:41:21 --> Error: Call to a member function find() on null
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 41.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(24): App\Controllers\Usuario\MQuejasController->obtener_tipo_prioridad('1')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:41:55 --> Error: Call to a member function find() on null
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 41.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(24): App\Controllers\Usuario\MQuejasController->obtener_tipo_prioridad('1')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:42:08 --> Error: Call to a member function find() on null
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 41.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(24): App\Controllers\Usuario\MQuejasController->obtener_tipo_prioridad('1')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:42:45 --> Error: Call to a member function find() on null
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 41.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(24): App\Controllers\Usuario\MQuejasController->obtener_tipo_prioridad('1')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:43:34 --> Error: Call to a member function find() on null
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 41.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(24): App\Controllers\Usuario\MQuejasController->obtener_tipo_prioridad('1')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:45:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:45:57 --> Error: Call to a member function find() on null
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 41.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(24): App\Controllers\Usuario\MQuejasController->obtener_tipo_prioridad('1')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:47:05 --> Error: Call to a member function find() on null
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 42.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(24): App\Controllers\Usuario\MQuejasController->obtener_tipo_prioridad('1')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:47:39 --> Error: Call to a member function find() on null
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 41.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(24): App\Controllers\Usuario\MQuejasController->obtener_tipo_prioridad('1')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:48:24 --> Error: Call to a member function find() on null
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 41.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(24): App\Controllers\Usuario\MQuejasController->obtener_tipo_prioridad('1')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:48:42 --> Error: Call to a member function find() on null
+in APPPATH\Controllers\Usuario\MQuejasController.php on line 41.
+ 1 APPPATH\Controllers\Usuario\MQuejasController.php(24): App\Controllers\Usuario\MQuejasController->obtener_tipo_prioridad('1')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-21 23:48:54 --> ErrorException: Undefined property: stdClass::$tipoPrioridad
+in APPPATH\Views\usuario\mQuejas\index.php on line 188.
+ 1 APPPATH\Views\usuario\mQuejas\index.php(188): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tipoPrioridad', 'F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php', 188)
+ 2 SYSTEMPATH\View\View.php(228): include('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\app\\Views\\usuario\\mQuejas\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('usuario/mquejas/index', [], true)
+ 5 APPPATH\Controllers\Usuario\MQuejasController.php(22): view('usuario/mquejas/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario\MQuejasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\MQuejasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('F:\\Descargas\\Nueva carpeta (13)\\plantilla\\public\\index.php')
+INFO - 2024-04-21 23:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
