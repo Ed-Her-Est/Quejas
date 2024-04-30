@@ -113,7 +113,7 @@
                     <th>Usuario</th>
                     <th>Fecha</th>
                     <th>Asunto</th>
-                    <th>Prioridad</th>
+                    <th>Estado</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
