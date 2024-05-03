@@ -29,7 +29,38 @@ class RetroalimentacionUserController extends ResourceController
     
         return view('usuario/quejas/index', $data);
     }
-    
+
+
+    public function responder($id)
+    {
+        $request = $this->request;
+        
+        // Validación de los datos del formulario de respuesta
+        $validationRules = [
+            'respuesta' => 'required|max_length[255]' // Puedes ajustar las reglas de validación según tus necesidades
+        ];
+        
+        if (!$this->validate($validationRules)) {
+            // Si la validación falla, redirige de vuelta con los errores
+            return redirect()->back()->withInput()->with('error', 'Hubo un problema al procesar tu respuesta.');
+        }
+        
+        // Obtener la retroalimentación asociada
+        $retroalimentacionModel = new RetroalimentacionModel();
+        $retroalimentacion = $retroalimentacionModel->find($id);
+        
+        if (!$retroalimentacion) {
+            // Si no se encuentra la retroalimentación, redirige de vuelta con un mensaje de error
+            return redirect()->back()->withInput()->with('error', 'La retroalimentación asociada no existe.');
+        }
+        
+        // Guardar la respuesta del usuario en la base de datos
+        $retroalimentacion->respuesta = $request->getPost('respuesta');
+        $retroalimentacionModel->save($retroalimentacion);
+        
+        // Redirigir de vuelta con un mensaje de éxito
+        return redirect()->back()->with('success', '¡Tu respuesta ha sido enviada correctamente!');
+    }
     /**
      * Return a new resource object, with default properties.
      *

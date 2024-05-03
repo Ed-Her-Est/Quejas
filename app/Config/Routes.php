@@ -67,8 +67,12 @@ $routes->group('usuario', ['filter' => 'auth'], function ($routes) {
     $routes->get('mquejas/show/(:num)', 'Usuario\MQuejasController::show/$1');
     $routes->get('mquejas/feedback/(:num)', 'Usuario\MQuejasController::feedback/$1');
     $routes->post('cafeteria/insert', 'Usuario\CafeteriaController::insert');
-    $routes->get('usuario/mquejas/respond/(:num)', 'Usuario\MQuejasController::respond/$1');
-    $routes->post('usuario/mquejas/respond/(:num)', 'Usuario\MQuejasController::submitResponse/$1');
+    $routes->post('mquejas/feedback/(:num)', 'Usuario\MQuejasController::feedback/$1');
+    $routes->get('mquejas/feedback', 'Usuario\MQuejasController::feedback');
+
+
+
+
 
 
 

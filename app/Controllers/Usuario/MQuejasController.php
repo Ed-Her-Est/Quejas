@@ -4,6 +4,7 @@ namespace App\Controllers\Usuario;
 
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\RESTful\ResourceController;
+use App\Models\RetroalimentacionModel;
 
 class MQuejasController extends ResourceController
 {
@@ -77,6 +78,7 @@ class MQuejasController extends ResourceController
         return view('usuario/mquejas/show', $data);
     }
     
+
     public function feedback($id = null)
     {
         // Verifica si se proporcionó un ID válido
@@ -85,7 +87,7 @@ class MQuejasController extends ResourceController
         }
     
         // Carga el modelo de Retroalimentación
-        $RetroalimentacionModel = model('RetroalimentacionModel');
+        $RetroalimentacionModel = new RetroalimentacionModel();
     
         // Busca la retroalimentación más reciente por el ID de la queja
         $feedback = $RetroalimentacionModel->where('id_queja', $id)
@@ -100,10 +102,37 @@ class MQuejasController extends ResourceController
         // Prepara los datos para pasar a la vista
         $data['feedback'] = $feedback;
     
+        // Si se envió el formulario de respuesta
+        if ($this->request->getMethod() === 'post') {
+            // Validación de los datos del formulario de respuesta
+            $validationRules = [
+                'respuesta' => 'required|max_length[255]' // Puedes ajustar las reglas de validación según tus necesidades
+            ];
+    
+            if (!$this->validate($validationRules)) {
+                // Si la validación falla, redirige de vuelta con los errores
+                return redirect()->back()->withInput()->with('error', 'Hubo un problema al procesar tu respuesta.');
+            }
+    
+            // Guarda la respuesta del usuario en la base de datos
+            $respuesta = $this->request->getPost('respuesta');
+            $feedback['respuesta'] = $respuesta;
+            
+            // Guarda la retroalimentación actualizada en la base de datos
+            $RetroalimentacionModel->save($feedback);
+    
+            // Redirige de vuelta con un mensaje de éxito
+            return redirect()->to(base_url('usuario/mquejas/feedback'))->with('success', '¡Tu respuesta ha sido enviada correctamente!');
+        }
+    
         // Muestra la vista con los detalles de la retroalimentación
         return view('usuario/mquejas/feedback', $data);
     }
     
+    
+
+
+   
 
 
     /**

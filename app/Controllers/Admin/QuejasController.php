@@ -179,7 +179,13 @@ class QuejasController extends ResourceController
     
         // Busca retroalimentaciones anteriores para esta queja
         $retroalimentaciones = $RetroalimentacionModel->where('id_queja', $id)->findAll();
-    
+                  
+                 // Obtener respuestas de retroalimentaciones si existen
+            foreach ($retroalimentaciones as &$retroalimentacion) {
+                $respuesta = $RetroalimentacionModel->where('id', $retroalimentacion['id'])->first();
+                $retroalimentacion['respuesta'] = $respuesta ? $respuesta['respuesta'] : null;
+            }
+
         // Si se envió un formulario para modificar la prioridad
         if ($this->request->getMethod() === 'post' && $this->request->getPost('tipoPrioridad')) {
             // Validar los datos del formulario
@@ -199,7 +205,7 @@ class QuejasController extends ResourceController
             $QuejaModel->update($id, ['id_prioridad' => $tipoPrioridad]);
     
             // Redirigir de vuelta a la página de retroalimentaciones
-            return redirect()->to(base_url('admin/quejas/retroalimentaciones/' . $id))->with('success', 'Tipo de prioridad actualizado correctamente.');
+            return redirect()->to(base_url('admin/quejas/retroalimentaciones/' . $id))->with('success', 'Estado actualizado correctamente.');
         }
     
         // Si se envió un formulario para agregar retroalimentación
